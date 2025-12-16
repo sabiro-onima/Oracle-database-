@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SQLite база</title>
+</head>
+<body>
+    <h1>Работа с SQLite</h1>
+
+    <form method="GET">
+        <input type="text" name="search" placeholder="Поиск..." value="{{ search }}">
+        <button type="submit">Искать</button>
+    </form>
+
+    <h2>Результаты:</h2>
+    <ul>
+        {% for row in rows %}
+            <li>ID: {{ row[0] }} — {{ row[1] }}</li>
+        {% endfor %}
+    </ul>
+
+    <br><br>
+    <button onclick="location.href='/'">Назад</button>
+</body>
+</html>

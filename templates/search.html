@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Поиск</title>
+</head>
+<body>
+
+<h1>Результаты поиска</h1>
+
+<form action="/search" method="get">
+    <input type="text" name="query" value="{{ query }}" placeholder="Поиск...">
+    <button type="submit">Искать</button>
+</form>
+
+<ul>
+{% for row in results %}
+    <li>{{ row[1] }}</li>
+{% endfor %}
+</ul>
+
+<a href="/add"><button>Добавить запись</button></a>
+<a href="/"><button>Назад</button></a>
+
+</body>
+</html>
